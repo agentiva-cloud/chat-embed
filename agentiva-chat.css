@@ -1,0 +1,25 @@
+/* Agentiva – Vollbild-Chat (CSS) */
+html,body{margin:0;height:100%}
+.ag-page{position:fixed;inset:0;z-index:2147483647;display:flex;flex-direction:column;font:14px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#FCFEFE;color:#0F3B3B}
+.ag-topbar{height:56px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 16px;border-bottom:1px solid rgba(0,0,0,.06);background:#E9F7F7;font-weight:700}
+.ag-brand{display:flex;align-items:center;gap:10px}
+.ag-logo{width:22px;height:22px;border-radius:6px;background:#159E9E}
+.ag-main{flex:1;display:flex;flex-direction:column;gap:12px;padding:16px}
+.ag-prompts{display:flex;flex-wrap:wrap;gap:8px}
+.ag-chip{border:1px solid rgba(0,0,0,.12);padding:8px 10px;border-radius:999px;background:#fff;cursor:pointer;font-size:13px}
+.ag-log{flex:1;overflow:auto;display:flex;flex-direction:column;gap:8px;padding-right:4px;scrollbar-gutter:stable}
+.ag-msg{position:relative;max-width:88%;margin:6px 0;line-height:1.5;background:rgba(0,0,0,.06);padding:12px 14px;border-radius:14px;word-wrap:break-word;white-space:pre-wrap;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.ag-msg.you{align-self:flex-end;color:#111;background:#159E9E;color:#fff;padding-right:44px}
+.ag-msg.bot{align-self:flex-start;color:#0F3B3B;padding-left:44px}
+.ag-msg.bot::before{content:"";position:absolute;left:8px;top:6px;width:28px;height:28px;border-radius:999px;background:#159E9E center/cover no-repeat;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.ag-typing{display:flex;align-items:center;gap:8px;opacity:.85}
+.ag-typing-dots{display:inline-flex;gap:4px}
+.ag-typing-dots span{width:6px;height:6px;border-radius:999px;background:#159E9E;opacity:.6;animation:agblink 1.2s infinite ease-in-out}
+.ag-typing-dots span:nth-child(2){animation-delay:.2s}
+.ag-typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes agblink{0%,80%,100%{transform:scale(.8);opacity:.4}40%{transform:scale(1);opacity:1}}
+.ag-input{display:flex;gap:8px;align-items:flex-end;border-top:1px solid rgba(0,0,0,.06);padding:10px 0 0}
+.ag-input textarea{flex:1;resize:none;min-height:46px;max-height:160px;padding:10px 12px;border-radius:10px;border:1px solid rgba(0,0,0,.12);outline:none;background:#fff}
+.ag-btn{background:#159E9E;color:#fff;border:none;border-radius:10px;padding:10px 12px;font-weight:600;cursor:pointer}
+.ag-btn[disabled]{opacity:.5;cursor:not-allowed}
+@media (max-width:640px){.ag-main{padding:12px}.ag-topbar{padding:10px 12px}}
